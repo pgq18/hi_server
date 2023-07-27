@@ -10,7 +10,7 @@ app = Flask(__name__)
 def set():
     global cnt
     cnt = cnt + 1
-    respons = requests.post("tcp://1.tcp.cpolar.cn:23058/set", data={"text" : "hello!"}).json()["text"]
+    respons = requests.post("https://4172e3b2.r3.cpolar.cn", data={"text" : "hello!"}).json()["text"]
     return jsonify({'text' : respons}) , 200
 
 if __name__ == "__main__":
