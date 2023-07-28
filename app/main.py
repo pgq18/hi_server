@@ -15,7 +15,6 @@ def set():
         response = requests.post("https://16006eb3.r3.cpolar.cn/set", headers=headers, data=json.dumps(data_in)).json()["text"]
         return jsonify({'text' : response}) , 200
     if request.method == "GET":
-        return jsonify({'text' : "get_done"}) , 200
         print("get")
         response = requests.get("https://16006eb3.r3.cpolar.cn/set", headers=headers, data=json.dumps(data_in)).json()
         return jsonify(response) , 200
