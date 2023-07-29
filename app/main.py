@@ -16,11 +16,9 @@ def set():
 
 @app.route('/get', methods = ['POST'])
 def get():
-    data_in = request.json
-    print("json")
     headers = {'Content-Type': 'application/json'}
     print("get")
-    response = requests.post("https://primate-major-gecko.ngrok-free.app/get", headers=headers, data=json.dumps(data_in)).json()
+    response = requests.post("https://primate-major-gecko.ngrok-free.app/get", headers=headers).json()
     return jsonify(response) , 200
 
 if __name__ == "__main__":
